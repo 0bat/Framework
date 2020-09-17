@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<div ng-app="myApp" ng-controller="studentsCtrl">
+<p>Cauta Student cu numele: <input type="text" ng-model="cautaNume"></p>
+  <ul>
+    <li ng-repeat="x in studenti | filter : cautaNume">
+      {{x.nume}}, {{x.prenume}}, Nota: {{x.nota}}
+    </li>
+  </ul>
+</div>
+<script>
+angular.module('myApp', []).controller('studentsCtrl', function($scope) {
+    $scope.studenti = [
+        {nume:'Ana',prenume:'Batir', nota: 10},
+        {nume:'Adrian',prenume:'Calib', nota: 5},
+        {nume:'Ion', prenume:'Tudorean', nota: 6},
+        {nume:'Cristina',prenume:'Rimes', nota: 7},
+        {nume:'Sorin',prenume:'Turcanu', nota: 8},
+        {nume:'Vadim',prenume:'Timus', nota: 9},
+        {nume:'Vlad',prenume:'Stirbu', nota: 2},
+        {nume:'Radu',prenume:'Iepure', nota: 2},
+        {nume:'Maia',prenume:'Ghidirim', nota: 10}
+        ];
+});
+</script>
+</body>
+</html>

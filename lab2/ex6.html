@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<div ng-app="myApp" ng-controller="namesCtrl">
+
+<table border="1" width="100%">
+<tr>
+<th>Nume</th>
+<th>Prenume</th>
+<th>Nota</th>
+</tr>
+<tr ng-repeat="x in names">
+<td>{{x.nume}}</td>
+<td>{{x.prenume}}</td>
+<td>{{x.nota}}</td>
+</tr>
+</table>
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('namesCtrl', function($scope) {
+    $scope.names = [
+        {nume:'Dumitru',prenume:'Hincu', nota: 2},
+        {nume:'Ion',prenume:'Ghidora', nota: 5},
+        {nume:'Cristi',prenume:'Prisac', nota: 6},
+        {nume:'Cristina',prenume:'Sandu', nota: 7},
+        {nume:'Karina',prenume:'Turcanu', nota: 8},
+        ];
+});
+</script>
+
+</body>
+</html>
