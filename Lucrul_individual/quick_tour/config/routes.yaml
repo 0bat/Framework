@@ -1,0 +1,4 @@
+# config/routes.yaml
+#index:
+#    path: /hello/{name}
+#    controller: 'App\Controller\DefaultController::index'
